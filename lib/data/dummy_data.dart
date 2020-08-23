@@ -304,7 +304,7 @@ const DUMMY_MEALS = const [
   Meal(
     id: 'm9',
     categories: ['c9'],
-    title: 'Chocolate Souffle',
+    title: 'Petit Gateau',
     cost: Cost.Cheap,
     complexity: Complexity.Difficult,
     imageUrl:
