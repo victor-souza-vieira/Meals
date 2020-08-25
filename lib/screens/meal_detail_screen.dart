@@ -2,6 +2,10 @@ import 'package:Meals/models/meal.dart';
 import 'package:flutter/material.dart';
 
 class MealDetailSreen extends StatelessWidget {
+  final Function(Meal) onToggleFavorite;
+
+  const MealDetailSreen(this.onToggleFavorite);
+
   Widget _createSectionTitle(BuildContext context, String title) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
@@ -86,8 +90,7 @@ class MealDetailSreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.star),
-        onPressed: () => Navigator.of(context)
-            .pop(meal.title), // retornando dados para a tela anterior
+        onPressed: () => onToggleFavorite(meal),
       ),
     );
   }
